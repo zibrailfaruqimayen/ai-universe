@@ -1,11 +1,15 @@
 import React from "react";
+import Button from "./component/Button/Button";
+import Card from "./component/Card/Card";
+import Header from "./component/Header/Header";
 
 const App = () => {
   return (
-    <div>
-      <button className="btn btn-primary">Button</button>
-      <button className="btn btn-secondary">Button</button>
-    </div>
+    <>
+      <Header></Header>
+      <Button>Sort by Date</Button>
+      <Card></Card>
+    </>
   );
 };
 
