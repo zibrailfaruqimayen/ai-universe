@@ -2,8 +2,8 @@ import React from "react";
 
 const SingleData = (props) => {
   //   console.log(props.singleData);
-  const { image, features, published_in, name } = props.singleData;
-  console.log(features);
+  const { id, image, features, published_in, name } = props.singleData;
+
   return (
     <div>
       <div className="card w-full h-full bg-base-100 shadow-2xl">
@@ -40,7 +40,11 @@ const SingleData = (props) => {
               <p>{published_in}</p>
             </div>
             <div>
-              <span className="cursor-pointer">
+              <label
+                onClick={() => props.setUniqueId(id)}
+                htmlFor="my-modal-5"
+                className="cursor-pointer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -55,12 +59,9 @@ const SingleData = (props) => {
                     d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
                   />
                 </svg>
-              </span>
+              </label>
             </div>
           </div>
-          {/* <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div> */}
         </div>
       </div>
     </div>
